@@ -3,47 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tap Game</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        #game {
-            width: 300px;
-            height: 300px;
-            background-color: #fff;
-            border: 2px solid #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 24px;
-        }
-        .tap-button {
-            width: 100px;
-            height: 50px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-        }
-    </style>
+    <title>Crypto Tap Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="game">
-        <button class="tap-button" onclick="increaseScore()">Tap me!</button>
+    <div class="container">
+        <div class="header">
+            <div class="profile">
+                <img src="profile.png" alt="Profile" class="profile-pic">
+                <span class="profile-name" id="profile-name">Pro...</span>
+            </div>
+            <button class="upgrade-button">Улучшить</button>
+        </div>
+        <div class="content">
+            <div class="balance" id="balance">$ 843,400</div>
+            <div class="clock">
+                <img src="image1.png" alt="Clock" class="clock-img">
+            </div>
+            <button class="withdraw-button">Снять $ 28,800</button>
+        </div>
+        <div class="navigation">
+            <button class="nav-button active">Главная</button>
+            <button class="nav-button">Задания</button>
+            <button class="nav-button">Друзья</button>
+            <button class="nav-button">Активность</button>
+            <button class="nav-button">Кошелек</button>
+        </div>
     </div>
-    <script>
-        let score = 0;
-        function increaseScore() {
-            score++;
-            document.getElementById('game').innerHTML = `<p>Score: ${score}</p><button class="tap-button" onclick="increaseScore()">Tap me!</button>`;
-        }
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
